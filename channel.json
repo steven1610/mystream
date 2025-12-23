@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "appName": "IPTV Flutter Test",
+  "groups": [
+    {
+      "id": "g_test",
+      "name": "Test Channels",
+      "subGroups": [
+        {
+          "id": "sg_hls",
+          "name": "HLS",
+          "channels": [
+            {
+              "id": "ch_bbb_hls",
+              "name": "Big Buck Bunny HLS",
+              "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Big.Buck.Bunny.-.Opening.Screen.png/640px-Big.Buck.Bunny.-.Opening.Screen.png",
+              "streams": [
+                {
+                  "type": "hls",
+                  "url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+                  "headers": {},
+                  "drm": {
+                    "type": "none"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ch_sintel_hls",
+              "name": "Sintel HLS",
+              "logo": "https://upload.wikimedia.org/wikipedia/commons/7/75/Sintel_poster.jpg",
+              "streams": [
+                {
+                  "type": "hls",
+                  "url": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
+                  "headers": {},
+                  "drm": {
+                    "type": "none"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sg_dash",
+          "name": "DASH",
+          "channels": [
+            {
+              "id": "ch_bbb_dash",
+              "name": "Big Buck Bunny DASH",
+              "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Big.Buck.Bunny.-.Opening.Screen.png/640px-Big.Buck.Bunny.-.Opening.Screen.png",
+              "streams": [
+                {
+                  "type": "dash",
+                  "url": "https://dash.akamaized.net/akamai/bbb_30fps/bbb_30fps.mpd",
+                  "headers": {},
+                  "drm": {
+                    "type": "none"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sg_clearkey",
+          "name": "DRM ClearKey",
+          "channels": [
+            {
+              "id": "ch_ck_dash",
+              "name": "ClearKey DASH (TEST)",
+              "logo": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Shaka_Player_Logo.png",
+              "streams": [
+                {
+                  "type": "dash",
+                  "url": "https://storage.googleapis.com/shaka-demo-assets/angel-one-clearkey/dash.mpd",
+                  "headers": {},
+                  "drm": {
+                    "type": "clearkey",
+                    "clearkey": {
+                      "kid": "1ae8ccd0e4e74b62a49e0a2a4e3d6b7f",
+                      "key": "7e571d037e571d037e571d037e571d03"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
